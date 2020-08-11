@@ -10,7 +10,7 @@
                 </header>
                 <header>
                     <button string="purchase" name="order" type="object" class="oe_highlight"/>
-                    <button string="actualize" name="%(waleed_factory.forum_action_view)d" type="action"
+                    <button string="actualize" name="%(plm.forum_action_view)d" type="action"
                             class="oe_highlight"/>
                     <button string="test" name="test" type="object"/>
                     <field name="status" widget="statusbar" options="{'clickable': '1'}"/>
