@@ -3,6 +3,7 @@ from odoo import models, fields
 
 class Submission(models.Model):
     _name = "submission"
+    _description = "the model of the submission form"
 
     actual_parts = fields.One2many("process.parts", "forum_parts")
     current_workers = fields.One2many("submission.intermediate", "current_workers")
@@ -15,6 +16,7 @@ class Submission(models.Model):
 
 class SubmissionIntermediate(models.Model):
     _name = "submission.intermediate"
+    _description = "a model to allow the selection of workers"
 
     name = fields.Many2one("workers")
     current_workers = fields.Many2one("submission", "current_workers")
