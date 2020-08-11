@@ -3,6 +3,7 @@ from odoo.exceptions import ValidationError
 
 
 # trial
+#yes
 # hello
 class Process(models.Model):
     _name = "processes"
