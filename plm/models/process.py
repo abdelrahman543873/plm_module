@@ -3,6 +3,7 @@ from odoo.exceptions import ValidationError
 
 
 # trial
+# hello
 class Process(models.Model):
     _name = "processes"
     _description = """ a model that  describes the standard template of the process that the product goes through
