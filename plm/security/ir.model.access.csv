@@ -1,0 +1,10 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_waleed_factory_waleed_factory,waleed_factory.waleed_factory,model_factory_product,,1,1,1,1
+access_inventory_parts,access_inventory_parts,model_inventory_parts,,1,1,1,1
+access_processes,access_processes,model_processes,,1,1,1,1
+access_workers,access_workers,model_workers,,1,1,1,1
+access_process_parts,access_process_parts,model_process_parts,,1,1,1,1
+access_log,access_log,model_log,,1,1,1,1
+access_submission,access_submission,model_submission,,1,1,1,1
+access_submission_intermediate,access_submission_intermediate,model_submission_intermediate,,1,1,1,1
+access_storage,access_storage,model_storage,,1,1,1,1

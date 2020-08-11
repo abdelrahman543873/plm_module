@@ -1,0 +1,485 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* waleed_factory
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-09 14:07+0000\n"
+"PO-Revision-Date: 2020-08-09 14:07+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: waleed_factory
+#: model:ir.model,name:waleed_factory.model_processes
+msgid ""
+" a model that  describes the standard template of the process that the product goes through\n"
+"    so that it could be used later for comparison against actual product"
+msgstr ""
+
+#. module: waleed_factory
+#: model:ir.model.fields,field_description:waleed_factory.field_submission__actual_parts
+msgid "Actual Parts"
+msgstr "القطع المستعمله"
+
+#. module: waleed_factory
+#: model:ir.actions.act_window,name:waleed_factory.forum_action_view
+#: model_terms:ir.ui.view,arch_db:waleed_factory.creation_form_view
+msgid "Actual consumption"
+msgstr "الاستهلاك الحقيقي"
+
+#. module: waleed_factory
+#: model_terms:ir.ui.view,arch_db:waleed_factory.workers_kanban_view
+msgid "Avatar"
+msgstr "الصوره"
+
+#. module: waleed_factory
+#: model_terms:ir.ui.view,arch_db:waleed_factory.creation_form_view
+msgid "Cancel"
+msgstr "الغاء"
+
+#. module: waleed_factory
+#: model:ir.model.fields.selection,name:waleed_factory.selection__factory_product__status__completed
+msgid "Completed"
+msgstr "انتهاء"
+
+#. module: waleed_factory
+#: model_terms:ir.ui.view,arch_db:waleed_factory.workers_kanban_view
+msgid "Cost:"
+msgstr "تكلفه"
+
+#. module: waleed_factory
+#: model:ir.model.fields,field_description:waleed_factory.field_factory_product__create_uid
+#: model:ir.model.fields,field_description:waleed_factory.field_inventory_parts__create_uid
+#: model:ir.model.fields,field_description:waleed_factory.field_log__create_uid
+#: model:ir.model.fields,field_description:waleed_factory.field_process_parts__create_uid
+#: model:ir.model.fields,field_description:waleed_factory.field_processes__create_uid
+#: model:ir.model.fields,field_description:waleed_factory.field_storage__create_uid
+#: model:ir.model.fields,field_description:waleed_factory.field_submission__create_uid
+#: model:ir.model.fields,field_description:waleed_factory.field_submission_intermediate__create_uid
+#: model:ir.model.fields,field_description:waleed_factory.field_workers__create_uid
+msgid "Created by"
+msgstr "انشيء بواسطه"
+
+#. module: waleed_factory
+#: model:ir.model.fields,field_description:waleed_factory.field_factory_product__create_date
+#: model:ir.model.fields,field_description:waleed_factory.field_inventory_parts__create_date
+#: model:ir.model.fields,field_description:waleed_factory.field_log__create_date
+#: model:ir.model.fields,field_description:waleed_factory.field_process_parts__create_date
+#: model:ir.model.fields,field_description:waleed_factory.field_processes__create_date
+#: model:ir.model.fields,field_description:waleed_factory.field_storage__create_date
+#: model:ir.model.fields,field_description:waleed_factory.field_submission__create_date
+#: model:ir.model.fields,field_description:waleed_factory.field_submission_intermediate__create_date
+#: model:ir.model.fields,field_description:waleed_factory.field_workers__create_date
+msgid "Created on"
+msgstr "انشيء في"
+
+#. module: waleed_factory
+#: model:ir.model.fields,field_description:waleed_factory.field_submission__current_workers
+msgid "Current Workers"
+msgstr "العمال الحالين"
+
+#. module: waleed_factory
+#: model:ir.model.fields,field_description:waleed_factory.field_factory_product__display_name
+#: model:ir.model.fields,field_description:waleed_factory.field_inventory_parts__display_name
+#: model:ir.model.fields,field_description:waleed_factory.field_log__display_name
+#: model:ir.model.fields,field_description:waleed_factory.field_process_parts__display_name
+#: model:ir.model.fields,field_description:waleed_factory.field_processes__display_name
+#: model:ir.model.fields,field_description:waleed_factory.field_storage__display_name
+#: model:ir.model.fields,field_description:waleed_factory.field_submission__display_name
+#: model:ir.model.fields,field_description:waleed_factory.field_submission_intermediate__display_name
+#: model:ir.model.fields,field_description:waleed_factory.field_workers__display_name
+msgid "Display Name"
+msgstr "الاسم"
+
+#. module: waleed_factory
+#: model:ir.model.fields,field_description:waleed_factory.field_factory_product__id
+#: model:ir.model.fields,field_description:waleed_factory.field_inventory_parts__id
+#: model:ir.model.fields,field_description:waleed_factory.field_log__id
+#: model:ir.model.fields,field_description:waleed_factory.field_process_parts__id
+#: model:ir.model.fields,field_description:waleed_factory.field_processes__id
+#: model:ir.model.fields,field_description:waleed_factory.field_storage__id
+#: model:ir.model.fields,field_description:waleed_factory.field_submission__id
+#: model:ir.model.fields,field_description:waleed_factory.field_submission_intermediate__id
+#: model:ir.model.fields,field_description:waleed_factory.field_workers__id
+msgid "ID"
+msgstr ""
+
+#. module: waleed_factory
+#: model:ir.model.fields,field_description:waleed_factory.field_factory_product____last_update
+#: model:ir.model.fields,field_description:waleed_factory.field_inventory_parts____last_update
+#: model:ir.model.fields,field_description:waleed_factory.field_log____last_update
+#: model:ir.model.fields,field_description:waleed_factory.field_process_parts____last_update
+#: model:ir.model.fields,field_description:waleed_factory.field_processes____last_update
+#: model:ir.model.fields,field_description:waleed_factory.field_storage____last_update
+#: model:ir.model.fields,field_description:waleed_factory.field_submission____last_update
+#: model:ir.model.fields,field_description:waleed_factory.field_submission_intermediate____last_update
+#: model:ir.model.fields,field_description:waleed_factory.field_workers____last_update
+msgid "Last Modified on"
+msgstr "اخر تحديث"
+
+#. module: waleed_factory
+#: model:ir.model.fields,field_description:waleed_factory.field_factory_product__write_uid
+#: model:ir.model.fields,field_description:waleed_factory.field_inventory_parts__write_uid
+#: model:ir.model.fields,field_description:waleed_factory.field_log__write_uid
+#: model:ir.model.fields,field_description:waleed_factory.field_process_parts__write_uid
+#: model:ir.model.fields,field_description:waleed_factory.field_processes__write_uid
+#: model:ir.model.fields,field_description:waleed_factory.field_storage__write_uid
+#: model:ir.model.fields,field_description:waleed_factory.field_submission__write_uid
+#: model:ir.model.fields,field_description:waleed_factory.field_submission_intermediate__write_uid
+#: model:ir.model.fields,field_description:waleed_factory.field_workers__write_uid
+msgid "Last Updated by"
+msgstr "تم التحديث بواسطه"
+
+#. module: waleed_factory
+#: model:ir.model.fields,field_description:waleed_factory.field_factory_product__write_date
+#: model:ir.model.fields,field_description:waleed_factory.field_inventory_parts__write_date
+#: model:ir.model.fields,field_description:waleed_factory.field_log__write_date
+#: model:ir.model.fields,field_description:waleed_factory.field_process_parts__write_date
+#: model:ir.model.fields,field_description:waleed_factory.field_processes__write_date
+#: model:ir.model.fields,field_description:waleed_factory.field_storage__write_date
+#: model:ir.model.fields,field_description:waleed_factory.field_submission__write_date
+#: model:ir.model.fields,field_description:waleed_factory.field_submission_intermediate__write_date
+#: model:ir.model.fields,field_description:waleed_factory.field_workers__write_date
+msgid "Last Updated on"
+msgstr "تم التحديث في"
+
+#. module: waleed_factory
+#: model:ir.model.fields,field_description:waleed_factory.field_process_parts__name
+#: model:ir.model.fields,field_description:waleed_factory.field_submission_intermediate__name
+#: model_terms:ir.ui.view,arch_db:waleed_factory.process_creation_view
+#: model_terms:ir.ui.view,arch_db:waleed_factory.products_creation_view
+#: model_terms:ir.ui.view,arch_db:waleed_factory.worker_form_view
+msgid "Name"
+msgstr "الاسم"
+
+#. module: waleed_factory
+#: model:ir.model.fields,field_description:waleed_factory.field_processes__output
+msgid "Output"
+msgstr "الناتج"
+
+#. module: waleed_factory
+#: model:ir.model.fields.selection,name:waleed_factory.selection__factory_product__status__pause
+msgid "Paused"
+msgstr "متوقف"
+
+#. module: waleed_factory
+#: model:ir.model.fields,field_description:waleed_factory.field_factory_product__price
+msgid "Price"
+msgstr "سعر"
+
+#. module: waleed_factory
+#: model:ir.model.fields.selection,name:waleed_factory.selection__factory_product__status__running
+msgid "Running"
+msgstr "قيد التنفيذ"
+
+#. module: waleed_factory
+#: model:ir.model.fields,field_description:waleed_factory.field_factory_product__states
+msgid "States"
+msgstr "العمليات"
+
+#. module: waleed_factory
+#: model:ir.model.fields,field_description:waleed_factory.field_factory_product__status
+msgid "Status"
+msgstr "الحاله"
+
+#. module: waleed_factory
+#: model:ir.model.fields,field_description:waleed_factory.field_storage__name
+msgid "Storage"
+msgstr ""
+
+#. module: waleed_factory
+#: model:ir.model.fields,field_description:waleed_factory.field_log__worker_name
+msgid "Worker"
+msgstr "العامل"
+
+#. module: waleed_factory
+#: model:ir.model,name:waleed_factory.model_log
+msgid ""
+"a model that is used to store the log of each product and it's time,raw "
+"material and cost consumption "
+msgstr ""
+
+#. module: waleed_factory
+#: model:ir.model.fields,field_description:waleed_factory.field_factory_product__actual_parts
+msgid "actual parts"
+msgstr "القطع المستخدمه"
+
+#. module: waleed_factory
+#: model:ir.model.fields,field_description:waleed_factory.field_factory_product__actual_price
+msgid "actual price"
+msgstr "السعر الحقيقي"
+
+#. module: waleed_factory
+#: model:ir.model.fields,field_description:waleed_factory.field_process_parts__actual_parts
+#: model:ir.model.fields,field_description:waleed_factory.field_process_parts__forum_parts
+msgid "actual_parts"
+msgstr "القطع المستعمله"
+
+#. module: waleed_factory
+#: model_terms:ir.ui.view,arch_db:waleed_factory.products_creation_view
+msgid "actualize"
+msgstr "تحقيق"
+
+#. module: waleed_factory
+#: model_terms:ir.actions.act_window,help:waleed_factory.workers_tree_action
+msgid "add workers"
+msgstr "مكان توثيق العمال"
+
+#. module: waleed_factory
+#: model:ir.model,name:waleed_factory.model_process_parts
+msgid ""
+"an intermediate table between processes and inventory.parts models to allow the setting of the \n"
+"    part quantity which fits this process"
+msgstr ""
+
+#. module: waleed_factory
+#: model:ir.model.fields,field_description:waleed_factory.field_log__cost
+msgid "cost"
+msgstr "تكلفه"
+
+#. module: waleed_factory
+#: model_terms:ir.actions.act_window,help:waleed_factory.parts_tree_action
+msgid "create your parts"
+msgstr "مكان توثيق القطع"
+
+#. module: waleed_factory
+#: model_terms:ir.actions.act_window,help:waleed_factory.process_list_action
+msgid "create your process here"
+msgstr "مكان توثيق العمليات"
+
+#. module: waleed_factory
+#: model:ir.model.fields,field_description:waleed_factory.field_submission_intermediate__current_workers
+msgid "current_workers"
+msgstr "العمال الحالين"
+
+#. module: waleed_factory
+#: model:ir.model.fields,field_description:waleed_factory.field_log__difference
+msgid "difference"
+msgstr "الفرق"
+
+#. module: waleed_factory
+#: model:ir.model.fields,field_description:waleed_factory.field_factory_product__duration
+msgid "duration"
+msgstr "المده"
+
+#. module: waleed_factory
+#: model:ir.model.fields,field_description:waleed_factory.field_factory_product__duration_text
+msgid "duration_text"
+msgstr "المده"
+
+#. module: waleed_factory
+#: model:ir.ui.menu,name:waleed_factory.factory_root_menu
+msgid "factory"
+msgstr "المصنع"
+
+#. module: waleed_factory
+#: model:ir.model.fields,field_description:waleed_factory.field_workers__hour_salary
+msgid "hour price"
+msgstr "سعر الساعه"
+
+#. module: waleed_factory
+#: model:ir.model.fields,field_description:waleed_factory.field_workers__number_hours
+msgid "hours number"
+msgstr "عدد الساعات"
+
+#. module: waleed_factory
+#: model:ir.model.fields,field_description:waleed_factory.field_workers__image
+msgid "image"
+msgstr "صوره"
+
+#. module: waleed_factory
+#: model:ir.model.fields,field_description:waleed_factory.field_inventory_parts__item_price
+msgid "item price"
+msgstr "سعر القطعه"
+
+#. module: waleed_factory
+#: model:ir.model.fields,field_description:waleed_factory.field_factory_product__actual_process
+msgid "log"
+msgstr "السجل"
+
+#. module: waleed_factory
+#: model:ir.model.fields,field_description:waleed_factory.field_processes__time
+#: model_terms:ir.ui.view,arch_db:waleed_factory.process_kanban_view
+msgid "minutes"
+msgstr "الدقائق"
+
+#. module: waleed_factory
+#: model:ir.model.fields,field_description:waleed_factory.field_factory_product__name
+#: model:ir.model.fields,field_description:waleed_factory.field_workers__name
+msgid "name"
+msgstr "الاسم"
+
+#. module: waleed_factory
+#: model:ir.model.fields,field_description:waleed_factory.field_processes__quantity
+msgid "output quantity"
+msgstr "كميه الانتاج"
+
+#. module: waleed_factory
+#: model:ir.model.fields,field_description:waleed_factory.field_inventory_parts__name
+#: model:ir.model.fields,field_description:waleed_factory.field_log__part
+msgid "part"
+msgstr "القطعه"
+
+#. module: waleed_factory
+#: model:ir.actions.act_window,name:waleed_factory.parts_tree_action
+msgid "parts list"
+msgstr "القطع"
+
+#. module: waleed_factory
+#: model:ir.actions.act_window,name:waleed_factory.process_list_action
+#: model:ir.model.fields,field_description:waleed_factory.field_log__name
+#: model:ir.model.fields,field_description:waleed_factory.field_processes__name
+#: model:ir.ui.menu,name:waleed_factory.process_main_menu
+msgid "process"
+msgstr "العمليه"
+
+#. module: waleed_factory
+#: model:ir.model.fields,field_description:waleed_factory.field_processes__process_parts
+msgid "process parts"
+msgstr "قطع العمليه"
+
+#. module: waleed_factory
+#: model:ir.model.fields,field_description:waleed_factory.field_factory_product__process_time
+msgid "process timing"
+msgstr "وقت العمليه"
+
+#. module: waleed_factory
+#: model:ir.model.fields,field_description:waleed_factory.field_process_parts__process_parts
+msgid "process_parts"
+msgstr "اجزاء العمليه"
+
+#. module: waleed_factory
+#: model:ir.model.fields,field_description:waleed_factory.field_factory_product__process
+msgid "processes"
+msgstr "العمليات"
+
+#. module: waleed_factory
+#: model:ir.actions.act_window,name:waleed_factory.products_tree_action
+#: model:ir.ui.menu,name:waleed_factory.products_main_menu
+msgid "products"
+msgstr "المنتجات"
+
+#. module: waleed_factory
+#: model_terms:ir.ui.view,arch_db:waleed_factory.products_creation_view
+msgid "products name"
+msgstr "اسم المنتج"
+
+#. module: waleed_factory
+#: model_terms:ir.actions.act_window,help:waleed_factory.products_tree_action
+msgid "products_creation_form"
+msgstr "مكان توثيق المنتجات"
+
+#. module: waleed_factory
+#: model_terms:ir.ui.view,arch_db:waleed_factory.products_creation_view
+msgid "purchase"
+msgstr "استهلاك من المخزن"
+
+#. module: waleed_factory
+#: model:ir.model.fields,field_description:waleed_factory.field_inventory_parts__quantity
+#: model:ir.model.fields,field_description:waleed_factory.field_log__value
+#: model:ir.model.fields,field_description:waleed_factory.field_process_parts__quantity
+msgid "quantity"
+msgstr "الكميه"
+
+#. module: waleed_factory
+#: model:ir.ui.menu,name:waleed_factory.parts_main_menu
+msgid "raw materials"
+msgstr "المواد الخام"
+
+#. module: waleed_factory
+#: model:ir.model.fields,field_description:waleed_factory.field_inventory_parts__storage
+msgid "storage Area"
+msgstr ""
+
+#. module: waleed_factory
+#: model:ir.model,name:waleed_factory.model_submission
+msgid "submission"
+msgstr "تسليم"
+
+#. module: waleed_factory
+#: model:ir.model,name:waleed_factory.model_submission_intermediate
+msgid "submission.intermediate"
+msgstr "وسيط"
+
+#. module: waleed_factory
+#: model_terms:ir.ui.view,arch_db:waleed_factory.creation_form_view
+msgid "submit"
+msgstr "ارسال"
+
+#. module: waleed_factory
+#: model_terms:ir.ui.view,arch_db:waleed_factory.products_creation_view
+msgid "test"
+msgstr "اختبار"
+
+#. module: waleed_factory
+#: model:ir.model.fields,field_description:waleed_factory.field_factory_product__worker
+msgid "text"
+msgstr "نص"
+
+#. module: waleed_factory
+#: model:ir.model,name:waleed_factory.model_inventory_parts
+msgid "the parts that form the products"
+msgstr "القطع اللتي تكون المنتج"
+
+#. module: waleed_factory
+#: model:ir.model,name:waleed_factory.model_factory_product
+msgid "the products model that stores all the details about the product"
+msgstr "جدول المنتج و خواصه"
+
+#. module: waleed_factory
+#: model:ir.model,name:waleed_factory.model_storage
+msgid "the storage area of the product"
+msgstr ""
+
+#. module: waleed_factory
+#: model:ir.model.constraint,message:waleed_factory.constraint_inventory_parts_name_unique
+msgid "this part name already exists"
+msgstr "اسم هذه القطعه موجود بالفعل"
+
+#. module: waleed_factory
+#: model:ir.model.constraint,message:waleed_factory.constraint_processes_name_unique
+msgid "this process name already exists"
+msgstr "اسم هذه العمليه موجود بالفعل"
+
+#. module: waleed_factory
+#: model:ir.model.constraint,message:waleed_factory.constraint_workers_name_unique
+msgid "this worker name already exists"
+msgstr "اسم هذا العامل موجود بالفعل"
+
+#. module: waleed_factory
+#: model:ir.model.fields,field_description:waleed_factory.field_log__time
+msgid "time"
+msgstr "الزمن"
+
+#. module: waleed_factory
+#: model_terms:ir.ui.view,arch_db:waleed_factory.process_kanban_view
+msgid "time:"
+msgstr "الزمن"
+
+#. module: waleed_factory
+#: model:ir.model.fields,field_description:waleed_factory.field_inventory_parts__total_cost
+msgid "total price"
+msgstr "السعر الكلي"
+
+#. module: waleed_factory
+#: model:ir.model.fields,field_description:waleed_factory.field_workers__total_salary
+msgid "total salary"
+msgstr "المرتب الكلي"
+
+#. module: waleed_factory
+#: model:ir.actions.act_window,name:waleed_factory.workers_tree_action
+#: model:ir.model.fields,field_description:waleed_factory.field_processes__workers
+#: model:ir.ui.menu,name:waleed_factory.workers_main_menu
+msgid "workers"
+msgstr "عمال"
+
+#. module: waleed_factory
+#: model:ir.model,name:waleed_factory.model_workers
+msgid "workers at the factory"
+msgstr "العمال في المصنع"

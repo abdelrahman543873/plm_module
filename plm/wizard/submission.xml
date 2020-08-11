@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="creation_form_view" model="ir.ui.view">
+            <field name="name">Actual consumption</field>
+            <field name="model">submission</field>
+            <field name="arch" type="xml">
+                <form string="Actual consumption">
+                    <group>
+                        <field name="current_workers">
+                            <tree editable="bottom">
+                                <field name="name"/>
+                            </tree>
+                        </field>
+                        <field name="actual_parts">
+                            <tree editable="bottom">
+                                <field name="name"/>
+                                <field name="quantity"/>
+                            </tree>
+                        </field>
+                    </group>
+                    <footer>
+                        <button string="submit" name="submit" type="object" class="oe_highlight"/>
+                        <button string="Cancel" class="btn btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="forum_action_view" model="ir.actions.act_window">
+            <field name="name">Actual consumption</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">submission</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="creation_form_view"/>
+            <field name="target">new</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,54 @@
+<odoo>
+    <record id="parts_creation_view" model="ir.ui.view">
+        <field name="name">parts</field>
+        <field name="model">inventory.parts</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="item_price"/>
+                        <field name="quantity"/>
+                        <field name="storage"/>
+                        <field name="total_cost"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="parts_tree_view" model="ir.ui.view">
+        <field name="name">parts</field>
+        <field name="model">inventory.parts</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" optional="show"/>
+                <field name="item_price" optional="show"/>
+                <field name="quantity" optional="show"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="parts_tree_action" model="ir.actions.act_window">
+        <field name="name">parts list</field>
+        <field name="res_model">inventory.parts</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="parts_tree_view"/>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                create your parts
+            </p>
+        </field>
+    </record>
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="factory_root_menu"
+              name="factory"
+              sequence="1"/>
+    <menuitem id="parts_main_menu"
+              name="raw materials"
+              parent="factory_root_menu"
+              action="parts_tree_action"
+              sequence="3"/>
+
+
+</odoo>

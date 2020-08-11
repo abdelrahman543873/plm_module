@@ -1,0 +1,92 @@
+<odoo>
+
+    <record id="worker_form_view" model="ir.ui.view">
+        <field name="name">workers</field>
+        <field name="model">workers</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" class="oe_highlight" placeholder="Name"/>
+                        </group>
+                        <group>
+                            <field name="image" widget="image" class="oe_avatar"/>
+                        </group>
+                        <group>
+                            <field name="number_hours"/>
+                            <field name="hour_salary"/>
+                        </group>
+                        <group>
+                            <field name="total_salary"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="workers_kanban_view" model="ir.ui.view">
+        <field name="name">workers</field>
+        <field name="model">workers</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <field name="name"/>
+                <field name="image"/>
+                <field name="id"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_global_click o_kanban_record_has_image_fill o_hospital_patient_kanban">
+                            <t t-if="record.image.raw_value">
+                                <div class="o_kanban_image_fill_left d-none d-md-block"
+                                     t-attf-style="background-image:url('#{kanban_image('workers','image',record.id.raw_value)}')"/>
+                            </t>
+                            <t t-else="">
+                                <img class="o_kanban_image" alt="Avatar"
+                                     t-att-src='_s + "/waleed_factory/static/img/avatar.jpg"'/>
+                            </t>
+                            <div class="oe_kanban_details">
+                                <strong class="o_kanban_record_title">
+                                    <field name="name"/>
+                                </strong>
+                                <div class="o_kanban_tags_section"/>
+                                <ul>
+                                    <li>Cost:
+                                        <field name="total_salary"/>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="worker_tree_view" model="ir.ui.view">
+        <field name="name">workers</field>
+        <field name="model">workers</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="hour_salary"/>
+                <field name="total_salary"/>
+            </tree>
+        </field>
+    </record>
+    <record id="workers_tree_action" model="ir.actions.act_window">
+        <field name="name">workers</field>
+        <field name="res_model">workers</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                add workers
+            </p>
+        </field>
+    </record>
+    <menuitem id="workers_main_menu"
+              name="workers"
+              parent="factory_root_menu"
+              action="workers_tree_action"
+              sequence="4"/>`
+</odoo>
