@@ -8,7 +8,7 @@ class FactoryProducts(models.Model):
     _name = "factory.product"
     _description = "the products model that stores all the details about the product"
 
-    name = fields.Text("inventory.parts", string="name", required=True)
+    name = fields.Text(string="name", required=True)
     price = fields.Float('Price', required=True)
     # the processes status bar that the process goes through
     actual_price = fields.Integer(compute="total_cost", string="actual price", readonly=True)
