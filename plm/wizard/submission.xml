@@ -12,7 +12,7 @@
                                 <field name="name"/>
                             </tree>
                         </field>
-                        <field name="actual_parts">
+                        <field name="forum">
                             <tree editable="bottom">
                                 <field name="name"/>
                                 <field name="quantity"/>

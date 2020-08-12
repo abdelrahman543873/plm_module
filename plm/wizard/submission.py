@@ -5,13 +5,13 @@ class Submission(models.Model):
     _name = "submission"
     _description = "the model of the submission form"
 
-    actual_parts = fields.One2many("process.parts", "forum_parts")
+    forum = fields.One2many("process.parts", "forum_parts")
     current_workers = fields.One2many("submission.intermediate", "current_workers")
 
     def submit(self):
         workers = ":".join([worker.name.name for worker in self.current_workers])
         self.env['factory.product'].browse(self._context.get('active_id')).worker = workers
-        self.env['factory.product'].browse(self._context.get('active_id')).actual_parts = self.actual_parts
+        self.env['factory.product'].browse(self._context.get('active_id')).actual_parts = self.forum
 
 
 class SubmissionIntermediate(models.Model):

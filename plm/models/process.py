@@ -70,4 +70,4 @@ class ProcessParts(models.Model):
     # another connection between the product and the inventory.part table to allow the entry of the actual number
     # of parts used in the process
     actual_parts = fields.Many2one("factory.product", "actual_parts")
-    forum_parts = fields.Many2one("submission", "actual_parts")
+    forum_parts = fields.Many2one("submission", "forum")
