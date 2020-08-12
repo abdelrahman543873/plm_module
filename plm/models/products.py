@@ -13,7 +13,8 @@ class FactoryProducts(models.Model):
     # the processes status bar that the process goes through
     actual_price = fields.Integer(compute="total_cost", string="actual price", readonly=True)
     # the different processes that the product goes through
-    states = fields.Many2one("processes", tracking=True, index=True, copy=False, required=True)
+    states = fields.Many2one("processes", tracking=True, index=True, copy=False, required=True,
+                             domain="[('id','in',process)]")
     # the processes table that the product goes through
     process = fields.Many2many("processes", string="processes")
     # the actual parts that was taken by the process
@@ -31,6 +32,10 @@ class FactoryProducts(models.Model):
     duration_text = fields.Text(string="duration_text", store=True)
     # worker who worked on this process
     worker = fields.Text(string="text", store=True)
+
+    @api.onchange('process')
+    def set_states_domain(self):
+        return {'domain': {'states': [('name', 'in', [i.name for i in self.process])]}}
 
     @api.onchange('actual_process')
     @api.depends('actual_process')
