@@ -11,19 +11,19 @@ class FactoryProducts(models.Model):
     name = fields.Text(string="name", required=True)
     price = fields.Float('Price', required=True)
     # the processes status bar that the process goes through
-    actual_price = fields.Integer(compute="total_cost", string="actual price", readonly=True)
+    actual_price = fields.Integer(compute="total_cost", string="actual price", readonly=True, copy=False)
     # the different processes that the product goes through
-    states = fields.Many2one("processes", tracking=True, index=True, copy=False, required=True,
+    states = fields.Many2one("processes", tracking=True, index=True, required=True,
                              domain="[('id','in',process)]")
     # the processes table that the product goes through
     process = fields.Many2many("processes", string="processes")
     # the actual parts that was taken by the process
     actual_parts = fields.One2many("process.parts", "actual_parts", string="actual parts")
     # the log of the product with the processes that the product went through and their consumption
-    actual_process = fields.Many2many("log", string="log", readonly=True)
+    actual_process = fields.Many2many("log", string="log", readonly=True, copy=False)
     # a field that detects the state of the product completed,pause or finalized
     status = fields.Selection([("running", "Running"), ("pause", "Paused"), ("completed", "Completed")],
-                              default="pause")
+                              default="pause", copy=False)
     # a variable that is used to store the value of the timestamp of when the process started running
     process_time = fields.Datetime(string="process timing", store=True)
     # calculate Duration of the process
