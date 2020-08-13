@@ -1,0 +1,489 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* plm
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-13 16:41+0000\n"
+"PO-Revision-Date: 2020-08-13 16:41+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: plm
+#: model:ir.model,name:plm.model_processes
+msgid ""
+" a model that  describes the standard template of the process that the product goes through\n"
+"    so that it could be used later for comparison against actual product"
+msgstr ""
+
+#. module: plm
+#: model:ir.actions.act_window,name:plm.forum_action_view
+#: model_terms:ir.ui.view,arch_db:plm.creation_form_view
+msgid "Actual consumption"
+msgstr "الاستهلاك الحقيقي"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.workers_kanban_view
+msgid "Avatar"
+msgstr "الصوره"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.creation_form_view
+msgid "Cancel"
+msgstr "الغاء"
+
+#. module: plm
+#: model:ir.model.fields.selection,name:plm.selection__factory_product__status__completed
+msgid "Completed"
+msgstr "انتهاء"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.workers_kanban_view
+msgid "Cost:"
+msgstr "تكلفه"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_factory_product__create_uid
+#: model:ir.model.fields,field_description:plm.field_inventory_parts__create_uid
+#: model:ir.model.fields,field_description:plm.field_log__create_uid
+#: model:ir.model.fields,field_description:plm.field_process_parts__create_uid
+#: model:ir.model.fields,field_description:plm.field_processes__create_uid
+#: model:ir.model.fields,field_description:plm.field_storage__create_uid
+#: model:ir.model.fields,field_description:plm.field_submission__create_uid
+#: model:ir.model.fields,field_description:plm.field_submission_intermediate__create_uid
+#: model:ir.model.fields,field_description:plm.field_workers__create_uid
+msgid "Created by"
+msgstr "انشيء بواسطه"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_factory_product__create_date
+#: model:ir.model.fields,field_description:plm.field_inventory_parts__create_date
+#: model:ir.model.fields,field_description:plm.field_log__create_date
+#: model:ir.model.fields,field_description:plm.field_process_parts__create_date
+#: model:ir.model.fields,field_description:plm.field_processes__create_date
+#: model:ir.model.fields,field_description:plm.field_storage__create_date
+#: model:ir.model.fields,field_description:plm.field_submission__create_date
+#: model:ir.model.fields,field_description:plm.field_submission_intermediate__create_date
+#: model:ir.model.fields,field_description:plm.field_workers__create_date
+msgid "Created on"
+msgstr "انشيء في"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_submission__current_workers
+msgid "Current Workers"
+msgstr "العمال الحالين"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_factory_product__display_name
+#: model:ir.model.fields,field_description:plm.field_inventory_parts__display_name
+#: model:ir.model.fields,field_description:plm.field_log__display_name
+#: model:ir.model.fields,field_description:plm.field_process_parts__display_name
+#: model:ir.model.fields,field_description:plm.field_processes__display_name
+#: model:ir.model.fields,field_description:plm.field_storage__display_name
+#: model:ir.model.fields,field_description:plm.field_submission__display_name
+#: model:ir.model.fields,field_description:plm.field_submission_intermediate__display_name
+#: model:ir.model.fields,field_description:plm.field_workers__display_name
+msgid "Display Name"
+msgstr "الاسم"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_submission__forum
+msgid "Forum"
+msgstr "المدخلات"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_factory_product__id
+#: model:ir.model.fields,field_description:plm.field_inventory_parts__id
+#: model:ir.model.fields,field_description:plm.field_log__id
+#: model:ir.model.fields,field_description:plm.field_process_parts__id
+#: model:ir.model.fields,field_description:plm.field_processes__id
+#: model:ir.model.fields,field_description:plm.field_storage__id
+#: model:ir.model.fields,field_description:plm.field_submission__id
+#: model:ir.model.fields,field_description:plm.field_submission_intermediate__id
+#: model:ir.model.fields,field_description:plm.field_workers__id
+msgid "ID"
+msgstr ""
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_factory_product____last_update
+#: model:ir.model.fields,field_description:plm.field_inventory_parts____last_update
+#: model:ir.model.fields,field_description:plm.field_log____last_update
+#: model:ir.model.fields,field_description:plm.field_process_parts____last_update
+#: model:ir.model.fields,field_description:plm.field_processes____last_update
+#: model:ir.model.fields,field_description:plm.field_storage____last_update
+#: model:ir.model.fields,field_description:plm.field_submission____last_update
+#: model:ir.model.fields,field_description:plm.field_submission_intermediate____last_update
+#: model:ir.model.fields,field_description:plm.field_workers____last_update
+msgid "Last Modified on"
+msgstr "اخر تحديث"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_factory_product__write_uid
+#: model:ir.model.fields,field_description:plm.field_inventory_parts__write_uid
+#: model:ir.model.fields,field_description:plm.field_log__write_uid
+#: model:ir.model.fields,field_description:plm.field_process_parts__write_uid
+#: model:ir.model.fields,field_description:plm.field_processes__write_uid
+#: model:ir.model.fields,field_description:plm.field_storage__write_uid
+#: model:ir.model.fields,field_description:plm.field_submission__write_uid
+#: model:ir.model.fields,field_description:plm.field_submission_intermediate__write_uid
+#: model:ir.model.fields,field_description:plm.field_workers__write_uid
+msgid "Last Updated by"
+msgstr "تم التحديث بواسطه"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_factory_product__write_date
+#: model:ir.model.fields,field_description:plm.field_inventory_parts__write_date
+#: model:ir.model.fields,field_description:plm.field_log__write_date
+#: model:ir.model.fields,field_description:plm.field_process_parts__write_date
+#: model:ir.model.fields,field_description:plm.field_processes__write_date
+#: model:ir.model.fields,field_description:plm.field_storage__write_date
+#: model:ir.model.fields,field_description:plm.field_submission__write_date
+#: model:ir.model.fields,field_description:plm.field_submission_intermediate__write_date
+#: model:ir.model.fields,field_description:plm.field_workers__write_date
+msgid "Last Updated on"
+msgstr "تم التحديث في"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_process_parts__name
+#: model:ir.model.fields,field_description:plm.field_submission_intermediate__name
+#: model_terms:ir.ui.view,arch_db:plm.process_creation_view
+#: model_terms:ir.ui.view,arch_db:plm.products_creation_view
+#: model_terms:ir.ui.view,arch_db:plm.worker_form_view
+msgid "Name"
+msgstr "الاسم"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_processes__output
+msgid "Output"
+msgstr "الناتج"
+
+#. module: plm
+#: model:ir.model.fields.selection,name:plm.selection__factory_product__status__pause
+msgid "Paused"
+msgstr "متوقف"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_factory_product__price
+msgid "Price"
+msgstr "سعر"
+
+#. module: plm
+#: model:ir.model.fields.selection,name:plm.selection__factory_product__status__running
+msgid "Running"
+msgstr "قيد التنفيذ"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_factory_product__states
+msgid "States"
+msgstr "العمليات"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_factory_product__status
+msgid "Status"
+msgstr "الحاله"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_storage__name
+msgid "Storage"
+msgstr "المخزن"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_log__worker_name
+msgid "Worker"
+msgstr "العامل"
+
+#. module: plm
+#: model:ir.model,name:plm.model_log
+msgid ""
+"a model that is used to store the log of each product and it's time,raw "
+"material and cost consumption "
+msgstr ""
+
+#. module: plm
+#: model:ir.model,name:plm.model_submission_intermediate
+msgid "a model to allow the selection of workers"
+msgstr ""
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_factory_product__actual_parts
+msgid "actual parts"
+msgstr "القطع المستخدمه"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_factory_product__actual_price
+msgid "actual price"
+msgstr "السعر الواقعي"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_process_parts__actual_parts
+msgid "actual_parts"
+msgstr "القطع المستعمله"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.products_creation_view
+msgid "actualize"
+msgstr "تحقيق"
+
+#. module: plm
+#: model_terms:ir.actions.act_window,help:plm.workers_tree_action
+msgid "add workers"
+msgstr "مكان توثيق العمال"
+
+#. module: plm
+#: model:ir.model,name:plm.model_process_parts
+msgid ""
+"an intermediate table between processes and inventory.parts models to allow the setting of the \n"
+"    part quantity which fits this process"
+msgstr ""
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_log__cost
+msgid "cost"
+msgstr "تكلفه"
+
+#. module: plm
+#: model_terms:ir.actions.act_window,help:plm.parts_tree_action
+msgid "create your parts"
+msgstr "مكان توثيق القطع"
+
+#. module: plm
+#: model_terms:ir.actions.act_window,help:plm.process_list_action
+msgid "create your process here"
+msgstr "مكان توثيق العمليات"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_submission_intermediate__current_workers
+msgid "current_workers"
+msgstr "العمال الحالين"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_log__difference
+msgid "difference"
+msgstr "الفرق"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_factory_product__duration
+msgid "duration"
+msgstr "المده"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_factory_product__duration_text
+msgid "duration_text"
+msgstr "المده"
+
+#. module: plm
+#: model:ir.ui.menu,name:plm.factory_root_menu
+msgid "factory"
+msgstr "المصنع"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_process_parts__forum_parts
+msgid "forum"
+msgstr "مدخلات"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_workers__hour_salary
+msgid "hour price"
+msgstr "سعر الساعه"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_workers__number_hours
+msgid "hours number"
+msgstr "عدد الساعات"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_workers__image
+msgid "image"
+msgstr "صوره"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_inventory_parts__item_price
+msgid "item price"
+msgstr "سعر القطعه"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_factory_product__actual_process
+msgid "log"
+msgstr "السجل"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_processes__time
+#: model_terms:ir.ui.view,arch_db:plm.process_kanban_view
+msgid "minutes"
+msgstr "الدقائق"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_factory_product__name
+#: model:ir.model.fields,field_description:plm.field_workers__name
+msgid "name"
+msgstr "الاسم"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_processes__quantity
+msgid "output quantity"
+msgstr "كميه الانتاج"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_inventory_parts__name
+#: model:ir.model.fields,field_description:plm.field_log__part
+msgid "part"
+msgstr "القطعه"
+
+#. module: plm
+#: model:ir.actions.act_window,name:plm.parts_tree_action
+msgid "parts list"
+msgstr "القطع"
+
+#. module: plm
+#: model:ir.actions.act_window,name:plm.process_list_action
+#: model:ir.model.fields,field_description:plm.field_log__name
+#: model:ir.model.fields,field_description:plm.field_processes__name
+#: model:ir.ui.menu,name:plm.process_main_menu
+msgid "process"
+msgstr "العمليه"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_processes__process_parts
+msgid "process parts"
+msgstr "قطع العمليه"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_factory_product__process_time
+msgid "process timing"
+msgstr "وقت العمليه"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_process_parts__process_parts
+msgid "process_parts"
+msgstr "اجزاء العمليه"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_factory_product__process
+msgid "processes"
+msgstr "العمليات"
+
+#. module: plm
+#: model:ir.actions.act_window,name:plm.products_tree_action
+#: model:ir.ui.menu,name:plm.products_main_menu
+msgid "products"
+msgstr "المنتجات"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.products_creation_view
+msgid "products name"
+msgstr "اسم المنتج"
+
+#. module: plm
+#: model_terms:ir.actions.act_window,help:plm.products_tree_action
+msgid "products_creation_form"
+msgstr "مكان توثيق المنتجات"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.products_creation_view
+msgid "purchase"
+msgstr "استهلاك من المخزن"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_inventory_parts__quantity
+#: model:ir.model.fields,field_description:plm.field_log__value
+#: model:ir.model.fields,field_description:plm.field_process_parts__quantity
+msgid "quantity"
+msgstr "الكميه"
+
+#. module: plm
+#: model:ir.ui.menu,name:plm.parts_main_menu
+msgid "raw materials"
+msgstr "المواد الخام"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_inventory_parts__storage
+msgid "storage Area"
+msgstr "المخزن"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.creation_form_view
+msgid "submit"
+msgstr "ارسال"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.products_creation_view
+msgid "test"
+msgstr "اختبار"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_factory_product__worker
+msgid "text"
+msgstr "نص"
+
+#. module: plm
+#: model:ir.model,name:plm.model_submission
+msgid "the model of the submission form"
+msgstr ""
+
+#. module: plm
+#: model:ir.model,name:plm.model_inventory_parts
+msgid "the parts that form the products"
+msgstr "القطع اللتي تكون المنتج"
+
+#. module: plm
+#: model:ir.model,name:plm.model_factory_product
+msgid "the products model that stores all the details about the product"
+msgstr "جدول المنتج و خواصه"
+
+#. module: plm
+#: model:ir.model,name:plm.model_storage
+msgid "the storage area of the product"
+msgstr "مكان تخزين المنتج"
+
+#. module: plm
+#: model:ir.model.constraint,message:plm.constraint_inventory_parts_name_unique
+msgid "this part name already exists"
+msgstr "اسم هذا المنتج موجود بالفعل"
+
+#. module: plm
+#: model:ir.model.constraint,message:plm.constraint_processes_name_unique
+msgid "this process name already exists"
+msgstr "اسم هذه العمليه مكرر"
+
+#. module: plm
+#: model:ir.model.constraint,message:plm.constraint_workers_name_unique
+msgid "this worker name already exists"
+msgstr "اسم هذا العامل موجود بالفعل"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_log__time
+msgid "time"
+msgstr "زمن"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.process_kanban_view
+msgid "time:"
+msgstr "زمن"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_inventory_parts__total_cost
+msgid "total price"
+msgstr "السعر الكلي"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_workers__total_salary
+msgid "total salary"
+msgstr "المرتب الكلي"
+
+#. module: plm
+#: model:ir.actions.act_window,name:plm.workers_tree_action
+#: model:ir.model.fields,field_description:plm.field_processes__workers
+#: model:ir.ui.menu,name:plm.workers_main_menu
+msgid "workers"
+msgstr "عمال"
+
+#. module: plm
+#: model:ir.model,name:plm.model_workers
+msgid "workers at the factory"
+msgstr "العمال في المصنع"
