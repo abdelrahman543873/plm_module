@@ -12,7 +12,7 @@ class InventoryParts(models.Model):
     item_price = fields.Integer(string="item price", required=True)
     quantity = fields.Integer(string="quantity", required=True)
     total_cost = fields.Integer(string="total price", readonly=True, compute="calculate_cost")
-    storage = fields.Many2one("storage", string="storage Area", required=True)
+    storage = fields.Many2one("storage", string="storage Area")
 
     @api.constrains('item_price', 'quantity')
     def check_quantity(self):
