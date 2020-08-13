@@ -222,6 +222,3 @@ class FactoryProducts(models.Model):
     def increase_inventory(self, model_name, quantity):
         if self.states.output:
             self.env[model_name].search([('name', '=', self.states.output.name)]).quantity += quantity
-
-    def test(self):
-        print("hello")
