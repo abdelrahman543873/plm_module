@@ -30,6 +30,7 @@
                             <tree>
                                 <field name="name"/>
                                 <field name="time"/>
+                                <field name="time_difference"/>
                                 <field name="worker_name"/>
                                 <field name="part"/>
                                 <field name="value"/>

@@ -166,7 +166,7 @@ msgstr "الناتج"
 #. module: plm
 #: model:ir.model.fields.selection,name:plm.selection__factory_product__status__pause
 msgid "Paused"
-msgstr "متوقف"
+msgstr "ايقاف"
 
 #. module: plm
 #: model:ir.model.fields,field_description:plm.field_factory_product__price
@@ -176,7 +176,7 @@ msgstr "سعر"
 #. module: plm
 #: model:ir.model.fields.selection,name:plm.selection__factory_product__status__running
 msgid "Running"
-msgstr "قيد التنفيذ"
+msgstr "تشغيل"
 
 #. module: plm
 #: model:ir.model.fields,field_description:plm.field_factory_product__states
@@ -465,6 +465,11 @@ msgstr "زمن"
 #: model_terms:ir.ui.view,arch_db:plm.process_kanban_view
 msgid "time:"
 msgstr "زمن"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_log__time_difference
+msgid "time difference"
+msgstr "الفارق الزمني"
 
 #. module: plm
 #: model:ir.model.fields,field_description:plm.field_inventory_parts__total_cost

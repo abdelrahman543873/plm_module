@@ -2,9 +2,6 @@ from odoo import models, fields, api
 from odoo.exceptions import ValidationError
 
 
-# trial
-#yes
-# hello
 class Process(models.Model):
     _name = "processes"
     _description = """ a model that  describes the standard template of the process that the product goes through

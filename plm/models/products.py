@@ -145,7 +145,7 @@ class FactoryProducts(models.Model):
                     cost = self.cost(name, actual_quantity[name], self.worker, int(self.duration),
                                      actual_processes_names)
                     self.fill_log_table(actual_processes_names, self.states.name, name, actual_quantity[name], cost,
-                                        self.worker, difference, self.duration_text)
+                                        self.worker, difference, self.duration_text, self.time_difference())
                     # add the worker time to his working hours
                     self.worker_time()
                 except KeyError:
@@ -165,7 +165,7 @@ class FactoryProducts(models.Model):
                 cost = self.cost(part.name.name, part.quantity, self.worker, int(self.duration),
                                  actual_processes_names)
                 self.fill_log_table(actual_processes_names, self.states.name, part.name.name, part.quantity, cost,
-                                    self.worker, 0, self.duration_text)
+                                    self.worker, 0, self.duration_text, self.time_difference())
             # increase the parts quantity when the process is completed
             self.increase_inventory("inventory.parts", self.states.quantity)
         else:
@@ -210,15 +210,21 @@ class FactoryProducts(models.Model):
         else:
             return parts_cost + worker_cost
 
-    def fill_log_table(self, processes, process_name, part_name, part_quantity, cost, worker_name, difference, time):
+    def fill_log_table(self, processes, process_name, part_name, part_quantity, cost, worker_name, difference, time
+                       , time_difference):
         if self.states.name in processes:
             values = {"part": part_name, "value": part_quantity,
                       "cost": cost}
         else:
             values = {"name": process_name, "part": part_name, "value": part_quantity, "difference": difference,
-                      "time": time, "worker_name": worker_name, "cost": cost}
+                      "time": time, "worker_name": worker_name, "cost": cost, "time_difference": time_difference}
         self.actual_process = [(0, 0, values)]
 
     def increase_inventory(self, model_name, quantity):
         if self.states.output:
             self.env[model_name].search([('name', '=', self.states.output.name)]).quantity += quantity
+
+    def time_difference(self):
+        if self.duration:
+            time_difference = self.states.time - (self.duration / 60)
+            return int(time_difference)

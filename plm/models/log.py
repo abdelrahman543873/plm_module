@@ -19,3 +19,5 @@ class Log(models.Model):
     worker_name = fields.Text(string="Worker")
     # the total cost of the process
     cost = fields.Integer(string="cost", store=True)
+    # calculating the time difference
+    time_difference = fields.Integer(string="time difference")
