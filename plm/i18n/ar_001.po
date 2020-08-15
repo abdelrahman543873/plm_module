@@ -217,8 +217,8 @@ msgstr "القطع المستخدمه"
 
 #. module: plm
 #: model:ir.model.fields,field_description:plm.field_factory_product__actual_price
-msgid "actual price"
-msgstr "السعر الواقعي"
+msgid "actual cost"
+msgstr "التكلفه"
 
 #. module: plm
 #: model:ir.model.fields,field_description:plm.field_process_parts__actual_parts

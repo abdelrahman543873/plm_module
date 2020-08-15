@@ -11,7 +11,7 @@ class FactoryProducts(models.Model):
     name = fields.Text(string="name", required=True)
     price = fields.Float('Price', required=True)
     # the processes status bar that the process goes through
-    actual_price = fields.Integer(compute="total_cost", string="actual price", readonly=True, copy=False)
+    actual_price = fields.Integer(compute="total_cost", string="actual cost", readonly=True, copy=False)
     # the different processes that the product goes through
     states = fields.Many2one("processes", tracking=True, index=True, required=True,
                              domain="[('id','in',process)]")
