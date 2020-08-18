@@ -68,3 +68,4 @@ class ProcessParts(models.Model):
     # of parts used in the process
     actual_parts = fields.Many2one("factory.product", "actual_parts")
     forum_parts = fields.Many2one("submission", "forum")
+    something = fields.Many2one('submission', "standard_parts")
