@@ -17,9 +17,9 @@ class InventoryParts(models.Model):
     @api.constrains('item_price', 'quantity')
     def check_quantity(self):
         if self.item_price <= 0:
-            raise ValidationError("price must be more than 0")
+            raise ValidationError("السعر يجب ان يكون اكبر من صفر")
         elif self.quantity < 0:
-            raise ValidationError("quantity must be more than 0")
+            raise ValidationError("الكميه لا تكفي")
 
     @api.depends('item_price', 'quantity')
     def calculate_cost(self):

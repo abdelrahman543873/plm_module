@@ -51,30 +51,32 @@ class FactoryProducts(models.Model):
             # if the current status was completed
             previous = self.env['factory.product'].browse(self.ids[0]).status
             if previous == "completed" and self.states:
-                raise ValidationError("you can't change a process after it's completed")
+                raise ValidationError("لا تستطيع تغير العمليه بعد ان تمت")
             elif self.status == "running":
                 # when the process status is changed to running a datetime stamp is created to document when the
                 # process started running
                 self.env['factory.product'].browse(self.ids[0]).process_time = datetime.now()
+            elif self.status == "completed":
+                raise ValidationError("عليك الاستهلاك من المخزن اولا")
             else:
                 # this function will store the time difference when the process state changed from running to any
                 # other state and store it in the duration field to calculate how much time did the process take
                 self.process_timing()
         else:
             if self.status != "pause":
-                raise ValidationError("you can't change state before product is created")
+                raise ValidationError("لا يمكن ان تغير حاله العمليه فبل ان تحفظها")
 
     # this checks if the process was completed or if it was a current state and prohibits removing it if that's the case
     @api.onchange('process')
     def check_process(self):
         if self.create_date:
             if self.states.name not in [i.name for i in self.process]:
-                raise ValidationError("don't remove the process")
+                raise ValidationError("لا يمكنك حذف العمليه")
             elif self.actual_process:
                 completed_processes = list(set([process.name for process in self.actual_process]))
                 for process in self.process:
                     if process.name in completed_processes:
-                        raise ValidationError("you can't remove a completed process")
+                        raise ValidationError("لا يمكن حذف عمليه مكتمله")
 
     @api.onchange('states')
     def check_state(self):
@@ -84,10 +86,10 @@ class FactoryProducts(models.Model):
                 raise ValidationError("process doesn't exist for this product")
             # if the process isn't completed you can't move to another process
             elif self.status != "completed" and self.create_date:
-                raise ValidationError("you have to complete this process first")
+                raise ValidationError("لا يمكنك الاانتفال قبل انهاء العمليه الاولي")
             # checks if the process has been completed before
             elif self.states.name in list(set([i.name for i in self.actual_process])):
-                raise ValidationError("process already completed")
+                raise ValidationError("هذه العمله تمت بالفعل")
             else:
                 # all of the behaviour here happens when the product is created
                 if self.create_date:
@@ -120,13 +122,13 @@ class FactoryProducts(models.Model):
     # a function that does the subtraction from the store after the process transition is done
     def order(self):
         if not self.create_date:
-            raise ValidationError("you can't withdraw unless products is saved")
+            raise ValidationError("لا يمكن الاستهلاك قبل ان تحفظ العمليه")
         elif self.status == "completed":
-            raise ValidationError("you can't withdraw when process is completed")
+            raise ValidationError("لا يمكنك السحب بعد ما انتهت العمليه")
         elif not self.worker:
-            raise ValidationError("you didn't enter the worker")
+            raise ValidationError("ادخل العامل اولا")
         elif not self.process_time:
-            raise ValidationError("this process was never run")
+            raise ValidationError("هذه العمليه لم يتم تنفيذها من قبل")
         elif self.actual_parts:
             """this is executed if there exists actual parts which differ from the standard parts of the process
             and the try statement here is to make sure that the parts that exist in the standard process template
@@ -149,7 +151,7 @@ class FactoryProducts(models.Model):
                     # add the worker time to his working hours
                     self.worker_time()
                 except KeyError:
-                    raise ValidationError("not all products of standard exist in actual")
+                    raise ValidationError("لم تختر كل القطع الموجوده في هذه العمليه")
             # increase the parts quantity when the process is completed
             self.increase_inventory("inventory.parts", self.states.quantity)
         elif self.states.process_parts:
