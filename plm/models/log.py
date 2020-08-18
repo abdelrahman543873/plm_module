@@ -10,9 +10,9 @@ class Log(models.Model):
     # the part that the process used
     part = fields.Text(required=True, string="part")
     # the quantity of the part used
-    value = fields.Integer(string="quantity", required=True)
+    value = fields.Float(string="quantity", required=True)
     # the difference between the standard value and the actual one
-    difference = fields.Integer(string="difference")
+    difference = fields.Float(string="difference")
     # the time taken by the process
     time = fields.Text(string="time")
     # worker who worked in the process

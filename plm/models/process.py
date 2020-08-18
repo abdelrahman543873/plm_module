@@ -16,7 +16,7 @@ class Process(models.Model):
     process_parts = fields.One2many("process.parts", "process_parts", string="process parts")
     workers = fields.Many2many("workers", string="workers")
     output = fields.Many2one("inventory.parts")
-    quantity = fields.Integer(string="output quantity")
+    quantity = fields.Float(string="output quantity")
 
     @api.constrains('quantity')
     def check_quantity(self):
@@ -61,7 +61,7 @@ class ProcessParts(models.Model):
     part quantity which fits this process"""
 
     name = fields.Many2one("inventory.parts")
-    quantity = fields.Integer(required=True, string="quantity")
+    quantity = fields.Float(required=True, string="quantity")
     # connection between the processes and process.parts table
     process_parts = fields.Many2one("processes", "process_parts")
     # another connection between the product and the inventory.part table to allow the entry of the actual number

@@ -10,7 +10,7 @@ class InventoryParts(models.Model):
 
     name = fields.Text(string="part", required=True, unique=True)
     item_price = fields.Integer(string="item price", required=True)
-    quantity = fields.Integer(string="quantity", required=True)
+    quantity = fields.Float(string="quantity", required=True)
     total_cost = fields.Integer(string="total price", readonly=True, compute="calculate_cost")
     storage = fields.Many2one("storage", string="storage Area")
 
