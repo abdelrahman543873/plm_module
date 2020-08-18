@@ -7,7 +7,7 @@
             <field name="arch" type="xml">
                 <form string="Actual consumption">
                     <group>
-                        <field name="current_workers" string="workers">
+                        <field name="current_workers" string="العمال">
                             <tree editable="bottom">
                                 <field name="name"/>
                             </tree>
@@ -18,7 +18,7 @@
                                 <field name="quantity"/>
                             </tree>
                         </field>
-                        <field name="forum" string="actual parts">
+                        <field name="forum" string="القطع الحقيقيه">
                             <tree editable="bottom">
                                 <field name="name"/>
                                 <field name="quantity"/>

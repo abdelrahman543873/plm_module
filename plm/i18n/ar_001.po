@@ -179,6 +179,11 @@ msgid "Running"
 msgstr "تشغيل"
 
 #. module: plm
+#: model:ir.model.fields,field_description:plm.field_submission__standard_parts
+msgid "Standard Parts"
+msgstr "القطع الافتراضيه"
+
+#. module: plm
 #: model:ir.model.fields,field_description:plm.field_factory_product__states
 msgid "States"
 msgstr "العمليات"
@@ -400,6 +405,11 @@ msgstr "الكميه"
 #: model:ir.ui.menu,name:plm.parts_main_menu
 msgid "raw materials"
 msgstr "المواد الخام"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_process_parts__something
+msgid "standard_parts"
+msgstr "القطع المفترضه"
 
 #. module: plm
 #: model:ir.model.fields,field_description:plm.field_inventory_parts__storage
