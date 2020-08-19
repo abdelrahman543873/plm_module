@@ -269,8 +269,8 @@ msgstr "العمال الحالين"
 
 #. module: plm
 #: model:ir.model.fields,field_description:plm.field_log__difference
-msgid "difference"
-msgstr "الفرق"
+msgid "difference in materials"
+msgstr "فرق الخامه"
 
 #. module: plm
 #: model:ir.model.fields,field_description:plm.field_factory_product__duration

@@ -30,11 +30,11 @@
                             <tree>
                                 <field name="name"/>
                                 <field name="time"/>
-                                <field name="time_difference"/>
+                                <field name="time_difference" attrs="{'invisible':[('time_difference','=',0)]}"/>
                                 <field name="worker_name"/>
                                 <field name="part"/>
                                 <field name="value"/>
-                                <field name="difference"/>
+                                <field name="difference" attrs="{'invisible':[('difference','=',0.00)]}"/>
                                 <field name="cost"/>
                                 <field name="create_date"/>
                             </tree>

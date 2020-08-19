@@ -12,7 +12,7 @@ class Log(models.Model):
     # the quantity of the part used
     value = fields.Float(string="quantity", required=True)
     # the difference between the standard value and the actual one
-    difference = fields.Float(string="difference")
+    difference = fields.Float(string="difference in materials")
     # the time taken by the process
     time = fields.Text(string="time")
     # worker who worked in the process
