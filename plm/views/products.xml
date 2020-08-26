@@ -15,12 +15,16 @@
                     <field name="status" widget="statusbar" options="{'clickable': '1'}"/>
                 </header>
                 <sheet>
+                    <widget name="web_ribbon" text="complete" bg_color="bg-danger"
+                    attrs="{'invisible': ['|',('complete','=',False),('create_date','=',False)]}"/>
                     <group class="oe_title">
                         <h1 string="products name">
                             <field name="name" placeholder="Name"/>
                         </h1>
                     </group>
                     <group>
+                        <field name="complete" attrs="{'invisible':True}"/>
+                        <field name="create_date" attrs="{'invisible':True}"/>
                         <group>
                             <field name="price"/>
                             <field name="actual_price"/>
@@ -49,6 +53,8 @@
         <field name="model">factory.product</field>
         <field name="arch" type="xml">
             <tree>
+                <field name="id" optional="show"/>
+                <field name="states" optional="show"/>
                 <field name="name" optional="show"/>
                 <field name="price" optional="show"/>
             </tree>

@@ -32,6 +32,13 @@ class FactoryProducts(models.Model):
     duration_text = fields.Text(string="duration_text", store=True)
     # worker who worked on this process
     worker = fields.Text(string="text", store=True)
+    # a boolean field that is a marker when the product is completed
+    complete = fields.Boolean(string="completed", default=False, compute="complete_check", store=True)
+
+    @api.depends('process', 'actual_process')
+    def complete_check(self):
+        if [i.name for i in self.process] == [i.name for i in self.actual_process]:
+            self.complete = True
 
     @api.onchange('process')
     def set_states_domain(self):
