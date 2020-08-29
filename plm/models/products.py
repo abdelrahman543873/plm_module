@@ -31,7 +31,7 @@ class FactoryProducts(models.Model):
     # output duration in text
     duration_text = fields.Text(string="duration_text", store=True)
     # worker who worked on this process
-    worker = fields.Text(string="text", store=True)
+    worker = fields.Text(string="text", store=True, copy=False)
     # a boolean field that is a marker when the product is completed
     complete = fields.Boolean(string="completed", default=False, compute="complete_check", store=True)
 
