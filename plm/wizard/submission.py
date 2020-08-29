@@ -16,9 +16,10 @@ class Submission(models.Model):
         self.standard_parts = process_id.process_parts
 
     def submit(self):
+        current_product = self.env['factory.product'].browse(self._context.get('active_id'))
         workers = ":".join([worker.name.name for worker in self.current_workers])
-        self.env['factory.product'].browse(self._context.get('active_id')).worker = workers
-        self.env['factory.product'].browse(self._context.get('active_id')).actual_parts = self.forum
+        current_product.worker = workers
+        current_product.actual_parts = self.forum
 
 
 class SubmissionIntermediate(models.Model):
