@@ -25,11 +25,11 @@ class FactoryProducts(models.Model):
     status = fields.Selection([("running", "Running"), ("pause", "Paused"), ("completed", "Completed")],
                               default="pause", copy=False)
     # a variable that is used to store the value of the timestamp of when the process started running
-    process_time = fields.Datetime(string="process timing", store=True)
+    process_time = fields.Datetime(string="process timing", store=True, copy=False)
     # calculate Duration of the process
-    duration = fields.Integer(string="duration", store=True)
+    duration = fields.Integer(string="duration", store=True, copy=False)
     # output duration in text
-    duration_text = fields.Text(string="duration_text", store=True)
+    duration_text = fields.Text(string="duration_text", store=True, copy=False)
     # worker who worked on this process
     worker = fields.Text(string="text", store=True, copy=False)
     # a boolean field that is a marker when the product is completed
