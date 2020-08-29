@@ -9,10 +9,13 @@
                     <field name="states" widget="statusbar" options="{'clickable': '1'}"/>
                 </header>
                 <header>
-                    <button string="purchase" name="order" type="object" class="oe_highlight"/>
-                    <button string="actualize" name="%(plm.forum_action_view)d" type="action"
-                            class="oe_highlight"/>
-                    <field name="status" widget="statusbar" options="{'clickable': '1'}"/>
+                    <button string="start" name="start" type="object" class="oe_highlight"
+                            attrs="{'invisible':[('status','!=','pause')]}"/>
+                    <button string="pause" name="pause" type="object" class="oe_highlight"
+                            attrs="{'invisible':[('status','!=','running')]}"/>
+                    <button string="end" name="end" type="object" class="oe_highlight"
+                            attrs="{'invisible':[('status','=','completed')]}"/>
+                    <field name="status" widget="statusbar"/>
                 </header>
                 <sheet>
                     <widget name="web_ribbon" text="complete" bg_color="bg-danger"
@@ -38,6 +41,8 @@
                                 <field name="worker_name"/>
                                 <field name="part"/>
                                 <field name="value"/>
+                                <field name="rating"/>
+                                <field name="notes"/>
                                 <field name="difference" attrs="{'invisible':[('difference','=',0.00)]}"/>
                                 <field name="cost"/>
                                 <field name="create_date"/>

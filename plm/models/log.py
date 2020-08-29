@@ -21,3 +21,7 @@ class Log(models.Model):
     cost = fields.Integer(string="cost", store=True)
     # calculating the time difference
     time_difference = fields.Integer(string="time difference")
+    # notes from the logging person
+    notes = fields.Text(string="notes")
+    # rating for the quality of the process on a scale of 10
+    rating = fields.Integer(string="rating")

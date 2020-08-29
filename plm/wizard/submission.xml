@@ -18,12 +18,14 @@
                                 <field name="quantity"/>
                             </tree>
                         </field>
-                        <field name="forum" string="القطع الحقيقيه">
+                        <field name="actual_parts" string="القطع الحقيقيه">
                             <tree editable="bottom">
                                 <field name="name"/>
                                 <field name="quantity"/>
                             </tree>
                         </field>
+                        <field name="notes"/>
+                        <field name="rating"/>
                     </group>
                     <footer>
                         <button string="submit" name="submit" type="object" class="oe_highlight"/>
