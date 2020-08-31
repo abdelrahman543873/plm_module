@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 13.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-13 16:41+0000\n"
-"PO-Revision-Date: 2020-08-13 16:41+0000\n"
+"POT-Creation-Date: 2020-08-31 11:01+0000\n"
+"PO-Revision-Date: 2020-08-31 11:01+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -21,6 +21,11 @@ msgid ""
 " a model that  describes the standard template of the process that the product goes through\n"
 "    so that it could be used later for comparison against actual product"
 msgstr ""
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_submission__actual_parts
+msgid "Actual Parts"
+msgstr "القطع المستخدمه"
 
 #. module: plm
 #: model:ir.actions.act_window,name:plm.forum_action_view
@@ -93,11 +98,6 @@ msgid "Display Name"
 msgstr "الاسم"
 
 #. module: plm
-#: model:ir.model.fields,field_description:plm.field_submission__forum
-msgid "Forum"
-msgstr "المدخلات"
-
-#. module: plm
 #: model:ir.model.fields,field_description:plm.field_factory_product__id
 #: model:ir.model.fields,field_description:plm.field_inventory_parts__id
 #: model:ir.model.fields,field_description:plm.field_log__id
@@ -159,6 +159,11 @@ msgid "Name"
 msgstr "الاسم"
 
 #. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.products_search_view
+msgid "Not done"
+msgstr "لم يتم"
+
+#. module: plm
 #: model:ir.model.fields,field_description:plm.field_processes__output
 msgid "Output"
 msgstr "الناتج"
@@ -216,24 +221,15 @@ msgid "a model to allow the selection of workers"
 msgstr ""
 
 #. module: plm
-#: model:ir.model.fields,field_description:plm.field_factory_product__actual_parts
-msgid "actual parts"
-msgstr "القطع المستخدمه"
-
-#. module: plm
 #: model:ir.model.fields,field_description:plm.field_factory_product__actual_price
 msgid "actual cost"
 msgstr "التكلفه"
 
 #. module: plm
 #: model:ir.model.fields,field_description:plm.field_process_parts__actual_parts
+#: model:ir.model.fields,field_description:plm.field_process_parts__forum_parts
 msgid "actual_parts"
 msgstr "القطع المستعمله"
-
-#. module: plm
-#: model_terms:ir.ui.view,arch_db:plm.products_creation_view
-msgid "actualize"
-msgstr "تحقيق"
 
 #. module: plm
 #: model_terms:ir.actions.act_window,help:plm.workers_tree_action
@@ -246,6 +242,11 @@ msgid ""
 "an intermediate table between processes and inventory.parts models to allow the setting of the \n"
 "    part quantity which fits this process"
 msgstr ""
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_factory_product__complete
+msgid "completed"
+msgstr "منتهي"
 
 #. module: plm
 #: model:ir.model.fields,field_description:plm.field_log__cost
@@ -283,14 +284,14 @@ msgid "duration_text"
 msgstr "المده"
 
 #. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.products_creation_view
+msgid "end"
+msgstr "انهاء"
+
+#. module: plm
 #: model:ir.ui.menu,name:plm.factory_root_menu
 msgid "factory"
 msgstr "المصنع"
-
-#. module: plm
-#: model:ir.model.fields,field_description:plm.field_process_parts__forum_parts
-msgid "forum"
-msgstr "مدخلات"
 
 #. module: plm
 #: model:ir.model.fields,field_description:plm.field_workers__hour_salary
@@ -330,6 +331,12 @@ msgid "name"
 msgstr "الاسم"
 
 #. module: plm
+#: model:ir.model.fields,field_description:plm.field_log__notes
+#: model:ir.model.fields,field_description:plm.field_submission__notes
+msgid "notes"
+msgstr "ملاحظات"
+
+#. module: plm
 #: model:ir.model.fields,field_description:plm.field_processes__quantity
 msgid "output quantity"
 msgstr "كميه الانتاج"
@@ -346,10 +353,16 @@ msgid "parts list"
 msgstr "القطع"
 
 #. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.products_creation_view
+msgid "pause"
+msgstr "ايقاف"
+
+#. module: plm
 #: model:ir.actions.act_window,name:plm.process_list_action
 #: model:ir.model.fields,field_description:plm.field_log__name
 #: model:ir.model.fields,field_description:plm.field_processes__name
 #: model:ir.ui.menu,name:plm.process_main_menu
+#: model_terms:ir.ui.view,arch_db:plm.products_tree_view
 msgid "process"
 msgstr "العمليه"
 
@@ -374,6 +387,11 @@ msgid "processes"
 msgstr "العمليات"
 
 #. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.products_tree_view
+msgid "product"
+msgstr "منتج"
+
+#. module: plm
 #: model:ir.actions.act_window,name:plm.products_tree_action
 #: model:ir.ui.menu,name:plm.products_main_menu
 msgid "products"
@@ -390,11 +408,6 @@ msgid "products_creation_form"
 msgstr "مكان توثيق المنتجات"
 
 #. module: plm
-#: model_terms:ir.ui.view,arch_db:plm.products_creation_view
-msgid "purchase"
-msgstr "استهلاك من المخزن"
-
-#. module: plm
 #: model:ir.model.fields,field_description:plm.field_inventory_parts__quantity
 #: model:ir.model.fields,field_description:plm.field_log__value
 #: model:ir.model.fields,field_description:plm.field_process_parts__quantity
@@ -402,14 +415,30 @@ msgid "quantity"
 msgstr "الكميه"
 
 #. module: plm
+#: model:ir.model.fields,field_description:plm.field_log__rating
+#: model:ir.model.fields,field_description:plm.field_submission__rating
+msgid "rating"
+msgstr "تقيم"
+
+#. module: plm
 #: model:ir.ui.menu,name:plm.parts_main_menu
 msgid "raw materials"
 msgstr "المواد الخام"
 
 #. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.products_search_view
+msgid "search products"
+msgstr "ابحث في المنتجات"
+
+#. module: plm
 #: model:ir.model.fields,field_description:plm.field_process_parts__something
 msgid "standard_parts"
 msgstr "القطع المفترضه"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.products_creation_view
+msgid "start"
+msgstr "ابدأ"
 
 #. module: plm
 #: model:ir.model.fields,field_description:plm.field_inventory_parts__storage
@@ -420,16 +449,6 @@ msgstr "المخزن"
 #: model_terms:ir.ui.view,arch_db:plm.creation_form_view
 msgid "submit"
 msgstr "ارسال"
-
-#. module: plm
-#: model_terms:ir.ui.view,arch_db:plm.products_creation_view
-msgid "test"
-msgstr "اختبار"
-
-#. module: plm
-#: model:ir.model.fields,field_description:plm.field_factory_product__worker
-msgid "text"
-msgstr "نص"
 
 #. module: plm
 #: model:ir.model,name:plm.model_submission
@@ -472,14 +491,14 @@ msgid "time"
 msgstr "زمن"
 
 #. module: plm
-#: model_terms:ir.ui.view,arch_db:plm.process_kanban_view
-msgid "time:"
-msgstr "زمن"
-
-#. module: plm
 #: model:ir.model.fields,field_description:plm.field_log__time_difference
 msgid "time difference"
 msgstr "الفارق الزمني"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.process_kanban_view
+msgid "time:"
+msgstr "زمن"
 
 #. module: plm
 #: model:ir.model.fields,field_description:plm.field_inventory_parts__total_cost
@@ -502,3 +521,13 @@ msgstr "عمال"
 #: model:ir.model,name:plm.model_workers
 msgid "workers at the factory"
 msgstr "العمال في المصنع"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.creation_form_view
+msgid "العمال"
+msgstr ""
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.creation_form_view
+msgid "القطع الحقيقيه"
+msgstr ""

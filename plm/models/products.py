@@ -29,12 +29,18 @@ class FactoryProducts(models.Model):
     # output duration in text
     duration_text = fields.Text(string="duration_text", store=True, copy=False)
     # a boolean field that is a marker when the product is completed
-    complete = fields.Boolean(string="completed", default=False, copy=False)
+    complete = fields.Boolean(string="completed", compute="complete_check", store=True, default=False, copy=False)
 
-    def write(self, vals):
-        if self.complete:
-            raise ValidationError("لا تستطيع ان تعدل منتج مكتمل")
-        return super(FactoryProducts, self).write(vals)
+    @api.depends('process', 'actual_process')
+    def complete_check(self):
+        process = [i.name for i in self.process]
+        completed_processes = [i.name for i in self.actual_process]
+        process.sort()
+        completed_processes.sort()
+        print(process)
+        print(completed_processes)
+        if process == completed_processes:
+            self.complete = True
 
     @api.onchange('process')
     def set_states_domain(self):

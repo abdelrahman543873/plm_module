@@ -138,7 +138,11 @@ class Submission(models.Model):
             return int(time_difference)
 
     def complete_check(self, current):
-        if [i.name for i in current.process] == [i.name for i in current.actual_process]:
+        processes = [i.name for i in current.process]
+        completed = [i.name for i in current.actual_process]
+        processes.sort()
+        completed.sort()
+        if processes == completed:
             current.complete = True
 
 

@@ -19,7 +19,7 @@
                 </header>
                 <sheet>
                     <widget name="web_ribbon" text="complete" bg_color="bg-danger"
-                    attrs="{'invisible': ['|',('complete','=',False),('create_date','=',False)]}"/>
+                            attrs="{'invisible': ['|',('complete','=',False),('create_date','=',False)]}"/>
                     <group class="oe_title">
                         <h1 string="products name">
                             <field name="name" placeholder="Name"/>
@@ -59,10 +59,21 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="id" optional="show"/>
-                <field name="states" optional="show"/>
-                <field name="name" optional="show"/>
+                <field name="states" string="process" optional="show"/>
+                <field name="status" optional="show"/>
+                <field name="name" string="product" optional="show"/>
                 <field name="price" optional="show"/>
             </tree>
+        </field>
+    </record>
+
+    <record id="products_search_view" model="ir.ui.view">
+        <field name="name">Products</field>
+        <field name="model">factory.product</field>
+        <field name="arch" type="xml">
+            <search string="search products">
+                <filter name="item_not_done" string="Not done" domain="[('complete','=',False)]"/>
+            </search>
         </field>
     </record>
     <!--  tree view of the products -->
@@ -71,6 +82,7 @@
         <field name="res_model">factory.product</field>
         <field name="view_mode">tree,form</field>
         <field name="view_id" ref="products_tree_view"/>
+        <field name="context">{"search_default_item_not_done":1}</field>
         <field name="help" type="xml">
             <p class="oe_view_nocontent_create">
                 products_creation_form
