@@ -7,21 +7,12 @@ class Log(models.Model):
                    "consumption "
 
     name = fields.Text(string="process")
-    # the part that the process used
     part = fields.Text(required=True, string="part")
-    # the quantity of the part used
     value = fields.Float(string="quantity", required=True)
-    # the difference between the standard value and the actual one
     difference = fields.Float(string="difference in materials")
-    # the time taken by the process
     time = fields.Text(string="time")
-    # worker who worked in the process
     worker_name = fields.Text(string="Worker")
-    # the total cost of the process
     cost = fields.Integer(string="cost", store=True)
-    # calculating the time difference
     time_difference = fields.Integer(string="time difference")
-    # notes from the logging person
     notes = fields.Text(string="notes")
-    # rating for the quality of the process on a scale of 10
     rating = fields.Integer(string="rating")

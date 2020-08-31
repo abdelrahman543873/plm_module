@@ -1,6 +1,7 @@
+from datetime import datetime, timedelta
+
 from odoo import models, fields, api
 from odoo.exceptions import ValidationError
-from datetime import datetime, timedelta
 
 
 class Submission(models.Model):
@@ -8,9 +9,8 @@ class Submission(models.Model):
     _description = "the model of the submission form"
 
     current_workers = fields.One2many("submission.intermediate", "current_workers")
-    standard_parts = fields.One2many("process.parts", "something", readonly=True,
-                                     compute="parts")
-    actual_parts = fields.One2many("process.parts", "forum_parts")
+    standard_parts = fields.One2many("process.parts", "forum_standard_parts", readonly=True, compute="parts")
+    actual_parts = fields.One2many("process.parts", "forum_actual_parts")
     notes = fields.Text(string="notes")
     rating = fields.Integer(string="rating")
 
