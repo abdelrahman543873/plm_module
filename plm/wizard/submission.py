@@ -1,7 +1,7 @@
 from odoo import models, fields, api
 from odoo.exceptions import ValidationError
 from datetime import datetime, timedelta
-
+import collections
 
 class Submission(models.Model):
     _name = "submission"
@@ -158,9 +158,7 @@ class Submission(models.Model):
     def complete_check(self, current):
         processes = [i.name for i in current.process]
         completed = [i.name for i in current.actual_process]
-        processes.sort()
-        completed.sort()
-        if processes == completed:
+        if collections.Counter(processes) == collections.Counter(completed):
             current.complete = True
 
 
