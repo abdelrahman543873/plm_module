@@ -68,7 +68,6 @@ class Submission(models.Model):
                                         workers, difference, current_product.duration_text,
                                         self.time_difference(current_product),
                                         current_product, self.notes, self.rating)
-                    self.complete_check(current_product)
                     # add the worker time to his working hours
                     self.worker_time(current_product)
                 except KeyError:
@@ -92,7 +91,6 @@ class Submission(models.Model):
                                     cost,
                                     workers, 0, current_product.duration_text, self.time_difference(current_product),
                                     current_product, self.notes, self.rating)
-                self.complete_check(current_product)
             # increase the parts quantity when the process is completed
             self.increase_inventory("inventory.parts", current_product.states.quantity, current_product)
         else:
@@ -154,12 +152,6 @@ class Submission(models.Model):
         if current.duration:
             time_difference = current.states.time - (current.duration / 60)
             return int(time_difference)
-
-    def complete_check(self, current):
-        processes = [i.name for i in current.process]
-        completed = [i.name for i in current.actual_process]
-        if collections.Counter(processes) == collections.Counter(completed):
-            current.complete = True
 
 
 class SubmissionIntermediate(models.Model):
