@@ -41,11 +41,13 @@ class Submission(models.Model):
         self.standard_parts = process_id.process_parts
 
     def submit(self):
-        if not self.current_workers:
-            raise ValidationError("ادخل العمال اولا")
         current_product = self.env['factory.product'].browse(self._context.get('active_id'))
         workers = ':'.join([i.name.name for i in self.current_workers])
-        if self.actual_parts:
+        if not self.current_workers:
+            raise ValidationError("ادخل العمال اولا")
+        elif not self.rating:
+            raise ValidationError("ادخل التقيم اولا")
+        elif self.actual_parts:
             """this is executed if there exists actual parts which differ from the standard parts of the process
             and the try statement here is to make sure that the parts that exist in the standard process template
             is in the actual parts template"""
