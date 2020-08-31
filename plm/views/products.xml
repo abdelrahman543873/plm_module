@@ -7,6 +7,7 @@
             <form>
                 <header>
                     <field name="states" widget="statusbar" options="{'clickable': '1'}"/>
+                    <button string ="test" name = "checking" type="object"/>
                 </header>
                 <header>
                     <button string="start" name="start" type="object" class="oe_highlight"
