@@ -1,4 +1,3 @@
-import collections
 from datetime import datetime, timedelta
 
 from odoo import models, fields, api
@@ -34,9 +33,9 @@ class FactoryProducts(models.Model):
 
     @api.depends('process', 'actual_process')
     def complete_check(self):
-        process = [i.name for i in self.process]
-        completed_processes = [i.name for i in self.actual_process]
-        if collections.Counter(process) == collections.Counter(completed_processes):
+        process = [i.name for i in self.process if i.name is not False]
+        completed_processes = [i.name for i in self.actual_process if i.name is not False]
+        if len(process) == len(completed_processes):
             self.complete = True
 
     @api.onchange('process')
