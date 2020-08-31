@@ -18,7 +18,7 @@
                     <field name="status" widget="statusbar"/>
                 </header>
                 <sheet>
-                    <widget name="web_ribbon" text="complete" bg_color="bg-danger"
+                    <widget name="web_ribbon" text="منتج منتهي" bg_color="bg-danger"
                             attrs="{'invisible': ['|',('complete','=',False),('create_date','=',False)]}"/>
                     <group class="oe_title">
                         <h1 string="products name">
