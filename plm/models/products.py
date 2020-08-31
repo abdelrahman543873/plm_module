@@ -37,8 +37,6 @@ class FactoryProducts(models.Model):
         completed_processes = [i.name for i in self.actual_process]
         process.sort()
         completed_processes.sort()
-        print(process)
-        print(completed_processes)
         if process == completed_processes:
             self.complete = True
 

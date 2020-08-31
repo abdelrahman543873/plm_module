@@ -14,6 +14,22 @@ class Submission(models.Model):
     notes = fields.Text(string="notes")
     rating = fields.Integer(string="rating")
 
+    @api.constrains('current_workers')
+    def checking_workers_repetition(self):
+        if self.current_workers:
+            workers = [i.name for i in self.current_workers]
+            for i in workers:
+                if workers.count(i) > 1:
+                    raise ValidationError("لا يمكن تكرار العامل")
+
+    @api.constrains('actual_parts')
+    def checking_workers_repetition(self):
+        if self.actual_parts:
+            parts = [i.name for i in self.actual_parts]
+            for i in parts:
+                if parts.count(i) > 1:
+                    raise ValidationError("لا يمكن تكرار القطعه")
+
     @api.constrains('rating')
     def check_rating(self):
         if self.rating < 0 or self.rating > 10:
