@@ -39,15 +39,6 @@ class FactoryProducts(models.Model):
         if collections.Counter(process) == collections.Counter(completed_processes):
             self.complete = True
 
-    @api.depends('process', 'actual_process')
-    def checking(self):
-        product = self.env['factory.product'].search([])
-        for producting in product:
-            process = [i.name for i in producting.process]
-            completed_processes = [i.name for i in producting.actual_process]
-            if collections.Counter(process) == collections.Counter(completed_processes):
-                producting.complete = True
-
     @api.onchange('process')
     def set_states_domain(self):
         return {'domain': {'states': [('name', 'in', [i.name for i in self.process])]}}
