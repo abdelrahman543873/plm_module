@@ -45,7 +45,14 @@ class Process(models.Model):
             parts = [i.quantity for i in self.process_parts]
             for i in parts:
                 if i <= 0:
-                    raise ValidationError("quantity can't be less than or equal to zero")
+                    raise ValidationError("الكميه لا يمكن ان تكون اقل من او تساوي صفر")
+
+    @api.onchange('process_parts')
+    def check_null(self):
+        if self.process_parts:
+            name = [i.name.name for i in self.process_parts]
+            if False in name:
+                raise ValidationError("لا يمكنك ادخال قطعه خاليه")
 
     # prevents any two processes to have the same name
     _sql_constraints = [
