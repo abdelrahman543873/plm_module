@@ -43,6 +43,8 @@ class Process(models.Model):
                     raise ValidationError("الكميه لا يمكن ان تكون اقل من او تساوي صفر")
                 elif not i.name.name:
                     raise ValidationError("لا يمكنك ادخال قطعه خاليه")
+        else:
+            raise ValidationError("لا يمكن ترك القطه خاليه")
 
     # prevents any two processes to have the same name
     _sql_constraints = [
