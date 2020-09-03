@@ -30,29 +30,19 @@ class Process(models.Model):
 
     # goes through the process_parts and then checks the count of each element and raised an error if a part is
     # duplicated
-    @api.constrains('process_parts')
-    def checking_parts_repetition(self):
-        if self.process_parts:
-            parts = [i.name for i in self.process_parts]
-            for i in parts:
-                if parts.count(i) > 1:
-                    raise ValidationError("parts are repeated !!")
-
     # goes through the quantity of each part and raises an error if the quantity of the part was set to 0
     @api.constrains('process_parts')
-    def check_quantity(self):
+    def checking_parts_errors(self):
         if self.process_parts:
-            parts = [i.quantity for i in self.process_parts]
+            parts = [i for i in self.process_parts]
+            parts_names = [i.name for i in self.process_parts]
             for i in parts:
-                if i <= 0:
+                if parts_names.count(i.name) > 1:
+                    raise ValidationError("القطع مكرره")
+                elif i.quantity <= 0:
                     raise ValidationError("الكميه لا يمكن ان تكون اقل من او تساوي صفر")
-
-    @api.constrains('process_parts')
-    def check_null(self):
-        if self.process_parts:
-            name = [i.name.name for i in self.process_parts]
-            if False in name:
-                raise ValidationError("لا يمكنك ادخال قطعه خاليه")
+                elif not i.name.name:
+                    raise ValidationError("لا يمكنك ادخال قطعه خاليه")
 
     # prevents any two processes to have the same name
     _sql_constraints = [
