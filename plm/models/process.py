@@ -47,7 +47,7 @@ class Process(models.Model):
                 if i <= 0:
                     raise ValidationError("الكميه لا يمكن ان تكون اقل من او تساوي صفر")
 
-    @api.onchange('process_parts')
+    @api.constrains('process_parts')
     def check_null(self):
         if self.process_parts:
             name = [i.name.name for i in self.process_parts]
