@@ -7,13 +7,25 @@
                 <sheet>
                     <group>
                         <field name="name"/>
-                        <field name="item_price"/>
-                        <field name="quantity"/>
+                        <field name="half_processed" attrs="{'invisible':True}"/>
                         <field name="storage"/>
+                        <field name="item_price" attrs="{'invisible':[('half_processed','=',True)]}"/>
+                        <field name="calculated_cost" attrs="{'invisible':[('half_processed','=',False)]}"/>
+                        <field name="quantity" attrs="{'readonly':[('half_processed','=',True)]}"/>
                         <field name="total_cost"/>
                     </group>
                 </sheet>
             </form>
+        </field>
+    </record>
+    <record id="view_half_processed" model="ir.ui.view">
+        <field name="name">parts</field>
+        <field name="model">inventory.parts</field>
+        <field name="arch" type="xml">
+            <search>
+                <filter name="half_processed" string="half processed"
+                        domain="[('half_processed','=','True')]"/>
+            </search>
         </field>
     </record>
 

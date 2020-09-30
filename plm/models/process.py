@@ -15,18 +15,37 @@ class Process(models.Model):
     # process
     process_parts = fields.One2many("process.parts", "process_parts", string="process parts")
     workers = fields.Many2many("workers", string="workers")
-    output = fields.Many2one("inventory.parts")
+    output = fields.Text()
     quantity = fields.Float(string="output quantity")
+
+    @api.model
+    def create(self, values):
+        if values['output']:
+            self.env['inventory.parts'].create(
+                {'name': values['output'], 'quantity': 0, 'half_processed': True})
+        return super().create(values)
 
     @api.constrains('quantity')
     def check_quantity(self):
         if self.output and self.quantity <= 0:
             raise ValidationError("select a quantity for the output")
 
+    @api.constrains('quantity')
+    def check_quantity_price(self):
+        if self.quantity and not self.output:
+            raise ValidationError("enter a product")
+
     @api.constrains('time')
     def check_time(self):
         if self.time <= 0:
             raise ValidationError("time can't be zero")
+
+    @api.constrains('output')
+    def check_if_exists(self):
+        raw_materials = [i for i in
+                         self.env['inventory.parts'].search([('name', '=', self.output)])]
+        if len(raw_materials) > 1:
+            raise ValidationError('this part already exists')
 
     # goes through the process_parts and then checks the count of each element and raised an error if a part is
     # duplicated

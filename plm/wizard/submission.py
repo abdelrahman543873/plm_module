@@ -124,7 +124,11 @@ class Submission(models.Model):
             current.status = "completed"
 
     def cost(self, part, quantity, worker, duration, processes, current):
-        parts_cost = self.env['inventory.parts'].search([('name', '=', part)]).item_price * quantity
+        part = self.env['inventory.parts'].search([('name', '=', part)])
+        if part.calculated_cost > 0:
+            parts_cost = part.calculated_cost * quantity
+        else:
+            parts_cost = part.item_price * quantity
         worker_cost = 0
         for worker in worker.split(":"):
             worker_cost += self.env['workers'].search([('name', '=', worker)]).hour_salary * int(duration / 3600)
@@ -146,7 +150,7 @@ class Submission(models.Model):
 
     def increase_inventory(self, model_name, quantity, current):
         if current.states.output:
-            self.env[model_name].search([('name', '=', current.states.output.name)]).quantity += quantity
+            self.env[model_name].search([('name', '=', current.states.output)]).quantity += quantity
 
     def time_difference(self, current):
         if current.duration:
